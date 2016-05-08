@@ -36,6 +36,12 @@ for(var a = 0; a < 5; a++){
       this.matrix[i][0] = copy[4][i];
       this.matrix[0][i] = copy[z - i][0];
    }
+   else{
+      this.matrix[z- i][0] = copy[0][i];
+      this.matrix[4][i] = copy[i][0];
+      this.matrix[i][4] = copy[4][z - i];
+      this.matrix[0][i] = copy[i][4];
+   }
 
     }
  for(var g = 1; g < 4; g++){
@@ -45,6 +51,12 @@ for(var a = 0; a < 5; a++){
      this.matrix[g][1] = copy[3][g];
      this.matrix[1][g] = copy[3-(g-1)][1];
    }
+   else{
+     this.matrix[3-(g-1)][1] = copy[1][g];
+     this.matrix[3][g] = copy[g][1];
+     this.matrix[g][3] = copy[3][3-(g-1)];
+     this.matrix[1][g] = copy[g][3];
+  }
 
  }
 
